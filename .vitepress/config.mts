@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "幻星FIVEM",
+  title: "七月Fivem",
   lastUpdated: true,
   lang: 'zh-CN',
   description: "幻星团队。",

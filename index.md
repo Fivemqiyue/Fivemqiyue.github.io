@@ -3,19 +3,23 @@
 layout: home
 
 hero:
-  name: "FIVEM文档"
-  text: "PhantomStarT1eam"
-  tagline: 专注fivem生态
+  name: "Fivem七月私人文档"
+  tagline: 创造绿色舒适圈
   actions:
     - theme: brand
-      text: 七月文档
+      text: 插件购买
       link: /qiyue
     - theme: alt
-      text: 莽狗文档
+      text: Fivem官方论坛
+      link: /qiyue
+    - theme: alt
+      text: Fivem技术交流群
       link: /mango
-
+    - theme: alt
+      text: Fivem吃瓜群
+      link: /mango
 features:
-  - title: 七月插件
+  - title: 
     details: 七月托管插件
   - title: Mango工具包
     details: 一款Fivem的工具包，帮助快速上手fivem服务器制作
