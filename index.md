@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "FIVEM文档"
-  text: "PhantomStarTeam"
+  text: "PhantomStarT1eam"
   tagline: 专注fivem生态
   actions:
     - theme: brand
