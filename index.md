@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 # git clone https://github.com/Fivemqiyue/Fivemqiyue.github.io
-# bun run docs:dev
+# npm run docs:dev
 # git add .
 # git commit -m "feat: 提交信息"
 # git pull
@@ -10,7 +10,7 @@ layout: home
 
 hero:
   name: "Fivem七月博客"
-  tagline: 创造绿色舒适圈s
+  tagline: 创造绿色舒适圈
   actions:
     - theme: brand
       text: Mango工具包

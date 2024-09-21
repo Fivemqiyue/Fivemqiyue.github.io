@@ -28,7 +28,7 @@ export default defineConfig({
   ],
   themeConfig: {
     siteTitle: 'FIVEM文档',
-    // logo: 'http://yun.9myi.com/d/icon.png',
+    // logo: './icon.png',
     search: {
       provider: 'local',
       options: {
@@ -62,7 +62,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '文档库', link: '/qiyue/index.md' }
+      { text: '七月记不住代码区', link: '/qiyue/index.md' }
     ],
 
     sidebar: {
@@ -70,7 +70,9 @@ export default defineConfig({
         {
           text: '七月文档列表',
           items: [
-            { text: '文档', link: '/qiyue/index.md' },
+            { text: '私人文档', link: '/qiyue/wendang.md' },
+            { text: '车辆不保存', link: '/qiyue/vehicle.md' },
+            { text: 'Qy_Core', link: '/qiyue/qy_core.md' },
           ]
         }
       ],
