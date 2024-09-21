@@ -23,7 +23,7 @@ export default defineConfig({
     ],
     [
       'meta',
-      { name: 'keywords', content: 'fivem开服，fivem，fivem插件，fivem去墙，fivem后门，fivem横幅，fivemAI助手，fivem汉化' }
+      { name: 'keywords', content: 'fivem开服,fivem,fivem插件,fivem去墙,fivem后门,fivem横幅,fivemAI助手,fivem汉化' }
     ]
   ],
   themeConfig: {
@@ -62,22 +62,15 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '七月文档库', link: '/qiyue/index.md' },
-      { text: 'mango工具包', link: '/mango/index.md' },
-      // {
-      //   text: '版本v0.0.8',
-      //   items: [
-      //     { text: '更新日志', link: '/changelog' }
-      //   ]
-      // }
+      { text: '文档库', link: '/qiyue/index.md' }
     ],
 
     sidebar: {
       '/qiyue/': [
         {
-          text: '七月文档库',
+          text: '七月文档列表',
           items: [
-            { text: '七月文档库', link: '/qiyue/index.md' },
+            { text: '文档', link: '/qiyue/index.md' },
           ]
         }
       ],
