@@ -62,7 +62,9 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '七月记不住代码区', link: '/qiyue/index.md' }
+      { text: '七月记不住代码区', link: '/qiyue/index.md'},
+      { text: 'Fivem文档', link: '/fivem_doc/0.md' },
+      { text: 'mango', link: '/mango/index.md' }
     ],
 
     sidebar: {
@@ -73,6 +75,36 @@ export default defineConfig({
             { text: '私人文档', link: '/qiyue/wendang.md' },
             { text: '车辆不保存', link: '/qiyue/vehicle.md' },
             { text: 'Qy_Core', link: '/qiyue/qy_core.md' },
+          ]
+        }
+      ],
+      '/fivem_doc/': [
+        {
+          text: 'Fivem中文-文档',
+          items: [
+            { text: '主页', link: '/fivem_doc/0.md'},
+            { text: 'Client(客户端手册)', link: '/fivem_doc/Client.md',
+              items: [
+                { text: '哪里购买 GTA V', link: '/fivem_doc/Client1.md' },
+                { text: '系统要求', link: '/fivem_doc/Client2.md' },
+                { text: '安装 FiveM', link: '/fivem_doc/Client3.md' },
+                { text: '控制台命令', link: '/fivem_doc/Client4.md' },
+                { text: '准星命令', link: '/fivem_doc/Client5.md' }
+              ]
+            },
+            { text: 'Server(服务端手册)', link: '/fivem_doc/Server.md',
+              items: [
+                { text: '设置服务器', link: '/fivem_doc/Server1.md' },
+                { text: '使用 ZAP-Hosting 设置服务器', link: '/fivem_doc/Server2.md' },
+                { text: '使用 txAdmin 设置服务器', link: '/fivem_doc/Server3.md' },
+                { text: '设置 Vanilla FXServer', link: '/fivem_doc/Server4.md' },
+                { text: '服务器命令', link: '/fivem_doc/Server5.md' },
+                { text: '代理设置', link: '/fivem_doc/Server6.md' },
+                { text: '从 CitizenMP.Server 迁移', link: '/fivem_doc/Server7.md' },
+                { text: '查找资源', link: '/fivem_doc/Server8.md' },
+                { text: '框架', link: '/fivem_doc/Server9.md' }
+              ]
+            }
           ]
         }
       ],
