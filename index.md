@@ -3,14 +3,14 @@
 # git clone https://github.com/Fivemqiyue/Fivemqiyue.github.io
 # bun run docs:dev
 # git add .
-# git commit -m 'feat: 提交信息'
+# git commit -m "feat: 提交信息"
 # git pull
 # git push
 layout: home
 
 hero:
   name: "Fivem七月博客"
-  tagline: 创造绿色舒适圈
+  tagline: 创造绿色舒适圈s
   actions:
     - theme: brand
       text: Mango工具包
