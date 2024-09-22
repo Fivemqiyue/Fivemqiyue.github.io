@@ -64,6 +64,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '七月记不住代码区', link: '/qiyue/index.md'},
       { text: 'Fivem文档', link: '/fivem_doc/0.md' },
+      { text: 'Qy_Core', link: '/qy_core.md' },
       { text: 'mango', link: '/mango/index.md' }
     ],
 
@@ -74,7 +75,6 @@ export default defineConfig({
           items: [
             { text: '私人文档', link: '/qiyue/wendang.md' },
             { text: '车辆不保存', link: '/qiyue/vehicle.md' },
-            { text: 'Qy_Core', link: '/qiyue/qy_core.md' },
           ]
         }
       ],
