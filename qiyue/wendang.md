@@ -90,6 +90,7 @@ xPlayer.job.grade_label --分昵称
 ESX.RegisterUsableItem('money', function(source)
     print('使用Money')
 end)
+```
 ------------------------------------------------------------------------------------------------
 ###  Esx回调
 ```lua
@@ -110,6 +111,7 @@ ESX.RegisterServerCallback('ls_phone检查手机物品',function(source, cb)
 		cb(false)
 	end
 end)
+```
 ------------------------------------------------------------------------------------------------
 ###  使用Key按键
 ```lua
