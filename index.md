@@ -17,7 +17,7 @@ hero:
       link: https://mango.9myi.com/
     - theme: brand
       text: 托管插件咨询
-      link: /托管
+      link: qiyuefufei/index.md
     - theme: alt
       text: Kook频道
       link: https://kook.top/EuG3Lg
