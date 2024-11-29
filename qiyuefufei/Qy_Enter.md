@@ -7,7 +7,7 @@ outline: deep
 ### || 框架: Qb | Esx ||
 
 ### || 展示图 ||
-![图片丢失](Qy_Enter/介绍图.png)
+![图片丢失](Qy_Enter介绍图.png)
 
 ### || 配置示例 ||
 

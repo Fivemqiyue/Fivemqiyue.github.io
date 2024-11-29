@@ -113,6 +113,7 @@ export default defineConfig({
           text: 'Fivem七月插件介绍',
           items: [
             { text: 'Qy_Enter[Vip进服提示]-售价50', link: '/qiyuefufei/Qy_Enter.md' },
+            { text: 'Qy_Billing[账单系统]-售价50', link: '/qiyuefufei/Qy_Billing.md' },
           ]
         }
       ],
