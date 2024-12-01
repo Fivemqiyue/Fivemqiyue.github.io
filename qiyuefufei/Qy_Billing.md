@@ -46,9 +46,3 @@ AddEventHandler('Qy_Billing:账单提交-Logs记录', function(source, billId, a
 	print('玩家'..xPlayer.getName()..'提交账单'..amount..'账单编号:'..billId..'所属公司'..account..'货币支付'..type)
 end)
 ```
-
-### || 购买渠道 ||
-```lua
-七月:2048732953
-Mango:1547542402
-```
