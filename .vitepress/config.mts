@@ -91,7 +91,8 @@ export default defineConfig({
           { text: 'Lb 手机适配文档', link: 'https://docs.lbphone.com/' },
           { text: 'Mono 车钥匙文档', link: 'https://mono-2.gitbook.io/docs/mono-scrips/mono_carkeys' },
           { text: 'FiveM 框架构建', link: 'https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/' },
-          { text: '动态 PNG 格式工具', link: 'https://products.aspose.app/imaging/zh-hans/animated-png-maker' }
+          { text: '动态 PNG 格式工具', link: 'https://products.aspose.app/imaging/zh-hans/animated-png-maker' },
+          { text: '微软小卡片', link: 'https://adaptivecards.io/designer/' }
         ]
       }
 
