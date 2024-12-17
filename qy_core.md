@@ -7,9 +7,9 @@ outline: deep
 exports['Qy_vPrompt']:Create({
     key = 'E',
     label = '打开邮件',
-    coords = Coords,
+    coords = vector3(1175.95, 2706.77, 38.09),
     canInteract = function()
-        TriggerEvent('Qy_Mail:OpenMenu')
+        print('1')
     end
 })
 ```
