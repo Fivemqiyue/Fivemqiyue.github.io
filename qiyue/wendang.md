@@ -340,16 +340,23 @@ CreateModelHide(vector3(-596.04, 2089.01, 131.41), 10.5, -1241212535, true)
 ------------------------------------------------------------------------------------------------
 ###  设置玩家状态-也可以用于反作弊 = 等等
 ```lua
---Client
-LocalPlayer.state:set('GetSmwp', true, true)    --设置玩家状态
 
+--设置玩家状态
+LocalPlayer.state:set('GetSmwp', true, true)
 
---Server
-local Player = Player(source)
-if Player.state.GetSmwp ~= true then
-    print('封禁')
+--获取玩家状态
+LocalPlayer.state['Black洗钱']
+
+if LocalPlayer.state['Black洗钱'] ~= true then
     return
 end
 
-Player.state.GetSmwp = false
+--Server
+local LocalPlayer = Player(source)
+if LocalPlayer.state['Black洗钱'] ~= true then
+    print('违规操作')
+    return
+end
+
+LocalPlayer.state.GetSmwp = false
 ```
