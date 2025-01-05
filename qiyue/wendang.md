@@ -350,13 +350,16 @@ LocalPlayer.state['Black洗钱']
 if LocalPlayer.state['Black洗钱'] ~= true then
     return
 end
-
+------------------------------------------------
 --Server
+
+--检查 true
 local LocalPlayer = Player(source)
 if LocalPlayer.state['Black洗钱'] ~= true then
     print('违规操作')
     return
 end
 
-LocalPlayer.state.GetSmwp = false
+--设置 Black洗钱 为 false
+LocalPlayer.state:set('Black洗钱', false, true)
 ```
