@@ -65,6 +65,7 @@ export default defineConfig({
       { text: '七月记不住代码区', link: '/qiyue/index.md' },
       { text: '付费插件', link: '/qiyuefufei/index.md' },
       { text: 'Fivem文档', link: '/fivem_doc/0.md' },
+      { text: 'Fivem日志', link: '/fivemrz/web.md' },
       { text: 'Qy_Core', link: '/qy_core.md' },
       { text: 'mango', link: '/mango/index.md' },
       {
@@ -148,6 +149,15 @@ export default defineConfig({
                 { text: '框架', link: '/fivem_doc/Server9.md' }
               ]
             }
+          ]
+        }
+      ],
+      '/fivemrz/': [
+        {
+          text: 'Fivem日志区',
+          items: [
+            { text: '主页', link: '/fivemrz/Web.md' },
+            { text: '哪里购买 GTA V', link: '/fivemrz/2025.1.26.md' },
           ]
         }
       ],
