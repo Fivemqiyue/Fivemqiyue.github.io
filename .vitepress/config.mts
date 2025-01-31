@@ -65,9 +65,7 @@ export default defineConfig({
       { text: '七月记不住代码区', link: '/qiyue/index.md' },
       { text: '付费插件', link: '/qiyuefufei/index.md' },
       { text: 'Fivem文档', link: '/fivem_doc/0.md' },
-      { text: 'Fivem日志', link: '/fivemrz/web.md' },
       { text: 'Qy_Core', link: '/qy_core.md' },
-      { text: 'mango', link: '/mango/index.md' },
       {
         text: '网站整合', items: [
           { text: '官网', link: 'https://Fivem.net/' },
@@ -117,6 +115,7 @@ export default defineConfig({
             { text: 'Qy_Store[自定义仓库]-售价50', link: '/qiyuefufei/Qy_Store.md' },
             { text: 'Qy_Enter[Vip进服提示]-售价50', link: '/qiyuefufei/Qy_Enter.md' },
             { text: 'Qy_Billing[账单系统]-售价50', link: '/qiyuefufei/Qy_Billing.md' },
+            { text: '测试[账单系统]-售价50', link: '/qiyuefufei/Qy_Cs.md' },
           ]
         }
       ],
@@ -149,44 +148,6 @@ export default defineConfig({
                 { text: '框架', link: '/fivem_doc/Server9.md' }
               ]
             }
-          ]
-        }
-      ],
-      '/fivemrz/': [
-        {
-          text: 'Fivem日志区',
-          items: [
-            { text: '主页', link: '/fivemrz/Web.md' },
-            { text: '哪里购买 GTA V', link: '/fivemrz/2025.1.26.md' },
-          ]
-        }
-      ],
-      '/mango/': [
-        {
-          text: '指南',
-          items: [
-            { text: '什么是Mango工具包？', link: '/mango/index' },
-            { text: '开始使用', link: '/mango/getting-started' }
-          ]
-        },
-        {
-          text: '功能介绍',
-          items: [
-            { text: '代码去墙', link: '/mango/wall' },
-            { text: '查后门', link: '/mango/door' },
-            { text: 'banner横幅制作', link: '/mango/banner' },
-            { text: '莽狗AI助手', link: '/mango/ai' },
-            { text: '插件汉化', link: '/mango/locale' }
-          ]
-        },
-        {
-          text: '更新日志',
-          items: [
-            { text: 'ChangeLog', link: '/mango/changelog' },
-            // { text: '查后门', link: '/door' },
-            // { text: 'banner横幅制作', link: '/banner' },
-            // { text: '莽狗AI助手', link: '/ai' },
-            // { text: '插件汉化', link: '/locale' }
           ]
         }
       ]
