@@ -115,7 +115,6 @@ export default defineConfig({
             { text: 'Qy_Store[自定义仓库]-售价50', link: '/qiyuefufei/Qy_Store.md' },
             { text: 'Qy_Enter[Vip进服提示]-售价50', link: '/qiyuefufei/Qy_Enter.md' },
             { text: 'Qy_Billing[账单系统]-售价50', link: '/qiyuefufei/Qy_Billing.md' },
-            { text: '测试[账单系统]-售价50', link: '/qiyuefufei/Qy_Cs.md' },
           ]
         }
       ],
