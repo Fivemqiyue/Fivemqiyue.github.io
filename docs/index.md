@@ -6,7 +6,7 @@ titleTemplate: 快速上手中文教程
 
 hero:
   name: VitePress
-  text: "快速上手中文教程"
+  text: "快速上手中文教程SB"
   tagline: 如果你也想搭建它，那跟我一起做吧
   image:
     src: /logo.png
