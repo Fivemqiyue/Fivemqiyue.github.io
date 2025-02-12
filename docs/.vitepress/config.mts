@@ -101,6 +101,7 @@ export default defineConfig({
     //导航栏
     nav: [
       { text: '首页', link: '/' },
+      { text: '私人笔记', link: '/qiyue/index' },
       {
         text: '网站整合', items: [
           { text: '官网', link: 'https://Fivem.net/' },
@@ -166,12 +167,28 @@ export default defineConfig({
                     { "text": "Name(姓名)", "link": "/Es_extended/Client/PlayerData_Name.md" },
                     { "text": "Sex(性别)", "link": "/Es_extended/Client/PlayerData_Sex.md" }
                   ]
+                },
+                {
+                  text: 'Events[玩家事件]',
+                  collapsed: true,
+                  items: [
+                    { "text": "Esx:addInventoryItem(添加物品提醒)", "link": "/Es_extended/Client/Esx_addInventoryItem.md" }
+                  ]
                 }
               ]
             }
           ]
         }
-      ]
+      ],
+      '/qiyue/': [
+        {
+          text: '七月文档列表',
+          items: [
+            { text: '私人文档', link: '/qiyue/wendang.md' },
+            { text: '车辆不保存', link: '/qiyue/vehicle.md' },
+          ]
+        }
+      ],
     },
 
     //本地搜索
