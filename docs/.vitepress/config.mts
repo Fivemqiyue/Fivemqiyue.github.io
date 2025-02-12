@@ -188,7 +188,7 @@ export default defineConfig({
             { text: '车辆不保存', link: '/qiyue/vehicle.md' },
           ]
         }
-      ],
+      ]
     },
 
     //本地搜索
