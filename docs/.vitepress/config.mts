@@ -17,7 +17,7 @@ export default defineConfig({
   ],
   // #endregion fav
 
-  base: '/vitepress/', //网站部署到github的vitepress这个仓库里
+  base: '/', //网站部署到github的vitepress这个仓库里
 
   //cleanUrls:true, //开启纯净链接无html
 
