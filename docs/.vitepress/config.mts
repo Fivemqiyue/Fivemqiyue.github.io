@@ -110,7 +110,6 @@ export default defineConfig({
           { text: '原生函数', link: 'https://docs.Fivem.net/natives/' },
           { text: '密钥大师', link: 'https://portal.cfx.re/' },
           { text: '5MODS', link: 'https://zh.gta5-mods.com/' },
-          { text: 'LCPDFR', link: 'https://www.lcpdfr.com/' },
           { text: 'FiveM 中文交流论坛', link: 'https://Fivembbs.net/' },
           { text: 'ESX 框架文档', link: 'https://documentation.esx-framework.org/' },
           { text: 'QB 框架文档', link: 'https://docs.qbcore.org/qbcore-documentation/' },
