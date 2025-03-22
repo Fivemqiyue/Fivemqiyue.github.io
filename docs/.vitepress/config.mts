@@ -109,7 +109,6 @@ export default defineConfig({
           { text: '官方文档', link: 'https://docs.Fivem.net/docs/' },
           { text: '原生函数', link: 'https://docs.Fivem.net/natives/' },
           { text: '密钥大师', link: 'https://portal.cfx.re/' },
-          { text: '官方合作商业系统', link: 'https://tebex.io/' },
           { text: '5MODS', link: 'https://zh.gta5-mods.com/' },
           { text: 'LCPDFR', link: 'https://www.lcpdfr.com/' },
           { text: 'FiveM 中文交流论坛', link: 'https://Fivembbs.net/' },
@@ -134,7 +133,7 @@ export default defineConfig({
       { text: '更新日志', link: '/changelog.md' },
     ],
 
-
+    //1
     //侧边栏
     sidebar: {
       '/Es_extended/': [
