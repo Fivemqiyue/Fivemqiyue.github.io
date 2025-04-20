@@ -102,6 +102,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '私人笔记', link: '/qiyue/index' },
+      { text: '付费脚本', link: '/ffcj/index' },
       {
         text: '网站整合', items: [
           { text: '官网', link: 'https://Fivem.net/' },
@@ -184,6 +185,15 @@ export default defineConfig({
           items: [
             { text: '私人文档', link: '/qiyue/wendang.md' },
             { text: '车辆不保存', link: '/qiyue/vehicle.md' },
+          ]
+        }
+      ],
+      '/ffcj/': [
+        {
+          text: '付费脚本文档',
+          items: [
+            { text: 'Qy_Admin[管理员]', link: '/ffcj/qy_admin.md' },
+            { text: 'Qy_Mail[邮件]', link: '/ffcj/qy_mail.md' },
           ]
         }
       ]

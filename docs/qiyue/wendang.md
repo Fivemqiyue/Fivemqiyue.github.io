@@ -369,3 +369,8 @@ LocalPlayer.state:set('Black洗钱', false, true)
 ```lua
 SetTextFont(4) 改 0
 ```
+------------------------------------------------------------------------------------------------
+###  Esx原生高级通知 - 屏幕最中间
+```lua
+ESX.Scaleform.ShowFreemodeMessage('~o~fact of the day', '~y~Hawaii is a king', 5)
+```

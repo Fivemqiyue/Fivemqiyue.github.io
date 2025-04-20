@@ -24,8 +24,6 @@ hero:
     - theme: sponsor
       text: 交流群
       link: https://qm.qq.com/q/3uSnyvqOr6
-
-
 features:
   - icon: 
       dark: /esx.png
