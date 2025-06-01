@@ -124,7 +124,7 @@ export default defineConfig({
           { text: '模型网', link: 'https://forge.plebmasters.de/objects' },
           { text: 'Lb 手机适配文档', link: 'https://docs.lbphone.com/' },
           { text: 'Mono 插件文档', link: 'https://mono-94.github.io/mDocuments/Home' },
-          { text: 'FiveM 框架构建', link: 'https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/' },
+          { text: 'FiveM 框架构建', link: 'https://artifacts.jgscripts.com/' },
           { text: '动态 PNG 格式工具', link: 'https://products.aspose.app/imaging/zh-hans/animated-png-maker' },
           { text: '微软小卡片', link: 'https://adaptivecards.io/designer/' },
           { text: '聚合图库', link: 'https://www.superbed.cn/' },
