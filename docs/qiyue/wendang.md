@@ -113,28 +113,24 @@ ESX.RegisterServerCallback('ls_phone检查手机物品',function(source, cb)
 end)
 ```
 ------------------------------------------------------------------------------------------------
-###  使用Key按键
+###  Fivem Key按键
 ```lua
 if IsControlJustReleased(0, 212) then
     print('按下按键')
 end
 ```
-------------------------------------------------------------------------------------------------
-###  获取玩家职业代码
+---------------------------------------------------------------------------
+###  Fivem 按键绑定
 ```lua
-if ESX.PlayerData.job and ESX.PlayerData.job.name == 'mechanic' then
-    print('你是mechanic')
-else
-    print('你不是mechanic')
-end
+RegisterKeyMapping('PoliceJob', '警察职业菜单', 'keyboard', 'F6')
+
+RegisterCommand('PoliceJob', function()
+    print('1')
+end)
 ```
-------------------------------------------------------------------------------------------------
+---------------------
 ###  Esx事件
 ```lua
-RegisterCommand('1', function()
-    print('你打了/1')
-end)
-
 ExecuteCommand('1')
 
 TriggerServerEvent('Qy_Core:Server')
