@@ -151,15 +151,6 @@ export default defineConfig({
             }
           ]
         }
-      ],
-      '/qiyue/': [
-        {
-          text: '七月文档列表',
-          items: [
-            { text: '私人文档', link: '/qiyue/wendang.md' },
-            { text: '车辆不保存', link: '/qiyue/vehicle.md' },
-          ]
-        }
       ]
     },
 
