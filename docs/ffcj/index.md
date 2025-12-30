@@ -22,6 +22,7 @@ layout: page
 
 <div class="script-grid">
 
+<a href="/ffcj/qy_admin" class="script-card-link">
 <div class="script-card admin-card">
   <div class="script-overlay"></div>
   <div class="script-header">
@@ -43,11 +44,12 @@ layout: page
     </div>
   </div>
   <div class="script-footer">
-    <a href="/ffcj/qy_admin" class="script-btn">📚 查看详情</a>
+    <span class="script-btn">📚 查看详情</span>
   </div>
 </div>
+</a>
 
-<div class="script-card mail-card">
+<div class="script-card mail-card disabled-card">
   <div class="script-overlay"></div>
   <div class="script-header">
     <span class="script-icon">📧</span>
@@ -388,6 +390,12 @@ layout: page
   justify-content: center;
 }
 
+.script-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .script-card {
   background: var(--vp-c-bg-soft);
   background-size: cover;
@@ -403,6 +411,12 @@ layout: page
   height: 300px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.script-card.disabled-card {
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .script-overlay {
