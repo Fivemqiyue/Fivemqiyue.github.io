@@ -382,7 +382,7 @@ layout: page
 /* Script Grid */
 .script-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
   gap: 24px;
   margin: 32px 0;
   justify-content: center;
@@ -395,12 +395,12 @@ layout: page
   background-repeat: no-repeat;
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
-  padding: 16px;
+  padding: 24px;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   position: relative;
   overflow: hidden;
 }
