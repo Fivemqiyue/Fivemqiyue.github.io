@@ -2,6 +2,69 @@
 outline: deep
 ---
 
+<style>
+/* 全局美化 */
+.vp-doc h1 {
+  border-bottom: 3px solid var(--vp-c-brand-1);
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.vp-doc h2 {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
+  position: relative;
+}
+
+.vp-doc h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), transparent);
+}
+
+.vp-doc h3 {
+  background: var(--vp-c-bg-soft);
+  padding: 12px 16px;
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 0 8px 8px 0;
+  margin: 24px 0 16px 0;
+}
+
+/* 代码块美化 */
+.vp-doc div[class*='language-'] {
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.vp-doc div[class*='language-']:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* hr 线美化 */
+.vp-doc hr {
+  margin: 32px 0;
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--vp-c-divider), transparent);
+}
+
+/* 列表美化 */
+.vp-doc ul, .vp-doc ol {
+  padding-left: 24px;
+}
+
+.vp-doc li {
+  margin: 8px 0;
+  line-height: 1.8;
+}
+</style>
+
 # 💻 代码区
 
 ::: info 📚 关于本文档
@@ -20,6 +83,15 @@ ESX = exports["es_extended"]:getSharedObject()
 ---
 
 ### 📄 fxmanifest.lua 配置模板
+
+<div class="template-download">
+  <h4>📦 完整开发模板下载</h4>
+  <p>包含所有必需文件，开箱即用！</p>
+  <a href="/downloads/Qy_Moban.zip" download class="download-btn-large">
+    📥 下载七月开发模板 (Qy_Moban.zip)
+  </a>
+</div>
+
 ```lua
 fx_version 'adamant' game 'gta5' lua54 'yes' 
 
@@ -53,6 +125,93 @@ files {
     'html/img/*.png'
 }
 ```
+
+<style>
+.template-download {
+  background: var(--vp-c-bg-soft);
+  border: 2px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 16px 0 24px 0;
+}
+
+.template-download h4 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  color: var(--vp-c-text-1);
+}
+
+.template-download p {
+  color: var(--vp-c-text-2);
+  margin: 0 0 16px 0;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #0ea5e9, #10b981);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
+  text-align: center;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.4);
+  background: linear-gradient(135deg, #0284c7, #059669);
+}
+
+.download-btn.readme {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.download-btn.readme:hover {
+  background: linear-gradient(135deg, #d97706, #ea580c);
+}
+
+.download-btn-large {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #0ea5e9, #10b981);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  text-align: center;
+}
+
+.download-btn-large:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.5);
+  background: linear-gradient(135deg, #0284c7, #059669);
+}
+
+@media (max-width: 768px) {
+  .download-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  
+  .download-btn-large {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+}
+</style>
 
 ---
 
