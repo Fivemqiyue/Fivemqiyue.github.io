@@ -16,7 +16,7 @@ layout: page
 <div class="scripts-container">
 
 <div class="section-header">
-  <h2>🎮 现有脚本s</h2>
+  <h2>🎮 现有脚本</h2>
   <p>精选的高质量 FiveM 脚本，每个都经过精心打磨</p>
 </div>
 
