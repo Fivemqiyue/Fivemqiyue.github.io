@@ -28,7 +28,7 @@ layout: page
   <div class="script-header">
     <span class="script-icon">👮</span>
     <h3>Qy_Admin</h3>
-    <span class="script-badge">管理员系统</span>
+    <span class="script-badge available">✅ 在售</span>
   </div>
   <div class="script-content">
     <p class="script-desc">综合服务器管理系统，提供玩家管理、车辆管理、资源管理等强大功能。</p>
@@ -43,9 +43,6 @@ layout: page
       <span>💻 UI: 现代化</span>
     </div>
   </div>
-  <div class="script-footer">
-    <span class="script-btn">📚 查看详情</span>
-  </div>
 </div>
 </a>
 
@@ -54,7 +51,7 @@ layout: page
   <div class="script-header">
     <span class="script-icon">📧</span>
     <h3>Qy_Mail</h3>
-    <span class="script-badge coming-soon">即将推出</span>
+    <span class="script-badge developing">🕒 开发中</span>
   </div>
   <div class="script-content">
     <p class="script-desc">完整的邮件系统，支持玩家间发送消息、物品和资金，支持附件功能。</p>
@@ -68,9 +65,6 @@ layout: page
       <span>🔧 框架: ESX</span>
       <span>💻 UI: 精美</span>
     </div>
-  </div>
-  <div class="script-footer">
-    <span class="script-btn disabled">🕒 开发中</span>
   </div>
 </div>
 
@@ -476,7 +470,6 @@ layout: page
 }
 
 .script-badge {
-  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
   color: white;
   padding: 4px 12px;
   border-radius: 12px;
@@ -484,12 +477,12 @@ layout: page
   font-weight: 600;
 }
 
-.script-badge.coming-soon {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+.script-badge.available {
+  background: linear-gradient(135deg, #10b981, #059669);
 }
 
-.script-badge.custom {
-  background: linear-gradient(135deg, #10b981, #059669);
+.script-badge.developing {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
 }
 
 .script-content {
@@ -530,38 +523,6 @@ layout: page
   border-top: 1px solid var(--vp-c-divider);
 }
 
-.script-footer {
-  margin-top: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-.script-btn {
-  display: inline-block;
-  width: 100%;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #0ea5e9, #10b981);
-  color: white;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
-}
-
-.script-btn:hover {
-  background: linear-gradient(135deg, #0284c7, #059669);
-  transform: scale(1.02);
-  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
-}
-
-.script-btn.disabled {
-  background: var(--vp-c-divider);
-  color: var(--vp-c-text-3);
-  cursor: not-allowed;
-  pointer-events: none;
-}
 
 .features-grid {
   display: grid;
