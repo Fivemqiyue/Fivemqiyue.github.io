@@ -17,7 +17,7 @@ hero:
       link: /Es_extended/index
     - theme: alt
       text: 📚 浏览文档
-      link: /getting-started
+      link: /qiyue/index
     - theme: sponsor
       text: 👥 加入社区
       link: https://qm.qq.com/q/2sSpck8P76
@@ -37,12 +37,6 @@ features:
     link: https://mango.9myi.com/
     linkText: 探索工具
   
-  - icon: 📝
-    title: 实战经验分享
-    details: 👨‍💻 七月的开发笔记<br>💡 实际项目经验总结<br>🐞 常见问题与解决方案
-    link: /qiyue/index
-    linkText: 阅读笔记
-  
   - icon: 🎁
     title: 优质脚本资源
     details: 💎 高质量付费脚本<br>👮 管理员系统 & 邮件系统<br>✨ 专业插件，开箱即用
@@ -54,12 +48,6 @@ features:
     details: 📚 FiveM 官方文档<br>📡 原生函数查询<br>👥 社区论坛 & 开发资源
     link: https://docs.Fivem.net/docs/
     linkText: 访问资源
-  
-  - icon: 🚀
-    title: 服务器搭建指南
-    details: 💻 从零开始搭建教程<br>⚙️ 完整的配置指南<br>✅ 最佳实践 & 性能优化
-    link: https://github.com/Yiov/vitepress-doc
-    linkText: 开始搭建
 ---
 
 <HomeUnderline />

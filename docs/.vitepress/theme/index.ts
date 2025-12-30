@@ -28,6 +28,7 @@ import MyLayout from "./components/MyLayout.vue" //视图过渡
 import backtotop from "./components/backtotop.vue" //返回顶部
 import notice from "./components/notice.vue" //公告
 import fluidborder from "./components/fluidborder.vue" //流体边框仅用于演示
+import FloatingContact from "./components/FloatingContact.vue" //漂浮联系按钮
 
 
 
@@ -75,7 +76,9 @@ export default {
     //   'layout-top': () => h(notice), // 公告layout-top插槽
     // })
 
-    return h(MyLayout,props)
+    return h(MyLayout, props, {
+      'layout-bottom': () => h(FloatingContact), // 漂浮联系按钮
+    })
   },
   
   // medium-zoom

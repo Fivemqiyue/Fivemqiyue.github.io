@@ -22,7 +22,8 @@ layout: page
 
 <div class="script-grid">
 
-<div class="script-card">
+<div class="script-card admin-card">
+  <div class="script-overlay"></div>
   <div class="script-header">
     <span class="script-icon">👮</span>
     <h3>Qy_Admin</h3>
@@ -46,7 +47,8 @@ layout: page
   </div>
 </div>
 
-<div class="script-card">
+<div class="script-card mail-card">
+  <div class="script-overlay"></div>
   <div class="script-header">
     <span class="script-icon">📧</span>
     <h3>Qy_Mail</h3>
@@ -67,30 +69,6 @@ layout: page
   </div>
   <div class="script-footer">
     <span class="script-btn disabled">🕒 开发中</span>
-  </div>
-</div>
-
-<div class="script-card">
-  <div class="script-header">
-    <span class="script-icon">🛠️</span>
-    <h3>定制开发</h3>
-    <span class="script-badge custom">支持定制</span>
-  </div>
-  <div class="script-content">
-    <p class="script-desc">根据您的需求定制开发专属脚本，支持 ESX 和 QB 框架。</p>
-    <div class="script-features">
-      <span class="feature-tag">✨ ESX 插件</span>
-      <span class="feature-tag">✨ QB 插件</span>
-      <span class="feature-tag">✨ UI 设计</span>
-      <span class="feature-tag">✨ 性能优化</span>
-    </div>
-    <div class="script-meta">
-      <span>🔧 框架: ESX/QB</span>
-      <span>💰 报价: 面议</span>
-    </div>
-  </div>
-  <div class="script-footer">
-    <a href="#contact" class="script-btn">💬 联系定制</a>
   </div>
 </div>
 
@@ -149,26 +127,6 @@ layout: page
     <div class="guarantee-icon">👍</div>
     <h3>售后支持</h3>
     <p>提供专业的售后技术支持，解决您在使用过程中遇到的问题。</p>
-  </div>
-</div>
-
-<div class="section-header">
-  <h2>📞 联系方式</h2>
-  <p>有任何问题或需求，欢迎随时联系我们</p>
-</div>
-
-<div class="contact-box">
-  <div class="contact-item">
-    <span class="contact-label">QQ</span>
-    <span class="contact-value">2048732953</span>
-  </div>
-  <div class="contact-item">
-    <span class="contact-label">邮箱</span>
-    <span class="contact-value">2048732953@qq.com</span>
-  </div>
-  <div class="contact-item">
-    <span class="contact-label">报价</span>
-    <span class="contact-value">支持定制报价，根据需求提供合理价格</span>
   </div>
 </div>
 
@@ -424,20 +382,52 @@ layout: page
 /* Script Grid */
 .script-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
   gap: 24px;
   margin: 32px 0;
+  justify-content: center;
 }
 
 .script-card {
   background: var(--vp-c-bg-soft);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
-  padding: 24px;
+  padding: 16px;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.script-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--vp-c-bg-soft);
+  opacity: 0.92;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dark .script-overlay {
+  opacity: 0.95;
+}
+
+/* 自定义卡片背景 */
+.script-card.admin-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.script-card.mail-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 .script-card:hover {
@@ -446,12 +436,18 @@ layout: page
   border-color: var(--vp-c-brand-1);
 }
 
+.script-card:hover .script-overlay {
+  opacity: 0.85;
+}
+
 .script-header {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .script-icon {
@@ -487,6 +483,8 @@ layout: page
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .script-desc {
@@ -520,6 +518,8 @@ layout: page
 
 .script-footer {
   margin-top: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .script-btn {

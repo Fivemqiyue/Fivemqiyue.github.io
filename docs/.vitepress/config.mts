@@ -104,7 +104,6 @@ export default defineConfig({
       { text: '私人笔记', link: '/qiyue/index' },
       { text: '付费脚本', link: '/ffcj/index' },
       { text: '资源整合', link: '/resources/index' },
-      { text: '更新日志', link: '/changelog.md' },
     ],
 
     //1
@@ -192,9 +191,7 @@ export default defineConfig({
 
 
     //社交链接
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/Yiov/vitepress-doc' }
-    ],
+    socialLinks: [],
 
     //手机端深浅模式文字修改
     darkModeSwitchLabel: '深浅模式',
