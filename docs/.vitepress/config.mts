@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-//命令集：pnpm add -D vitepress vue @mdit-vue/shared @types/node busuanzi.pure.js canvas-confetti less medium-zoom sass vitepress-plugin-comment-with-giscus xgplayer
+//命令集：pnpm add -D vitepress vue @mdit-vue/shared @types/node canvas-confetti less medium-zoom sass vitepress-plugin-comment-with-giscus xgplayer
 
 import { devDependencies } from '../../package.json'
 
@@ -103,33 +103,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '私人笔记', link: '/qiyue/index' },
       { text: '付费脚本', link: '/ffcj/index' },
-      {
-        text: '网站整合', items: [
-          { text: '官网', link: 'https://Fivem.net/' },
-          { text: '官方论坛', link: 'https://forum.cfx.re/' },
-          { text: '官方文档', link: 'https://docs.Fivem.net/docs/' },
-          { text: '原生函数', link: 'https://docs.Fivem.net/natives/' },
-          { text: '密钥大师', link: 'https://portal.cfx.re/' },
-          { text: '5MODS', link: 'https://zh.gta5-mods.com/' },
-          { text: 'FiveM 中文交流论坛', link: 'https://Fivembbs.net/' },
-          { text: 'ESX 框架文档', link: 'https://documentation.esx-framework.org/' },
-          { text: 'QB 框架文档', link: 'https://docs.qbcore.org/qbcore-documentation/' },
-          { text: 'Ox 文档', link: 'https://overextended.github.io/docs/' },
-          { text: '锻造大师', link: 'https://forge.plebmasters.de/' },
-          { text: 'GTA 数据库', link: 'https://www.gtabase.com/' },
-          { text: '哈希转换工具', link: 'https://cxde.es/hash/' },
-          { text: '添加式车包制作工具', link: 'https://addon.zerodream.net/' },
-          { text: 'NPC 网站', link: 'https://wiki.rage.mp/index.php?title=Peds' },
-          { text: '动作网站', link: 'https://alexguirre.github.io/animations-list/' },
-          { text: '模型网', link: 'https://forge.plebmasters.de/objects' },
-          { text: 'Lb 手机适配文档', link: 'https://docs.lbphone.com/' },
-          { text: 'Mono 插件文档', link: 'https://mono-94.github.io/mDocuments/Home' },
-          { text: 'FiveM 框架构建', link: 'https://artifacts.jgscripts.com/' },
-          { text: '动态 PNG 格式工具', link: 'https://products.aspose.app/imaging/zh-hans/animated-png-maker' },
-          { text: '微软小卡片', link: 'https://adaptivecards.io/designer/' },
-          { text: '聚合图库', link: 'https://www.superbed.cn/' },
-        ]
-      },
+      { text: '资源整合', link: '/resources/index' },
       { text: '更新日志', link: '/changelog.md' },
     ],
 
@@ -185,15 +159,6 @@ export default defineConfig({
           items: [
             { text: '私人文档', link: '/qiyue/wendang.md' },
             { text: '车辆不保存', link: '/qiyue/vehicle.md' },
-          ]
-        }
-      ],
-      '/ffcj/': [
-        {
-          text: '付费脚本文档',
-          items: [
-            { text: 'Qy_Admin[管理员]', link: '/ffcj/qy_admin.md' },
-            { text: 'Qy_Mail[邮件]', link: '/ffcj/qy_mail.md' },
           ]
         }
       ]

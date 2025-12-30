@@ -2,14 +2,24 @@
 outline: deep
 ---
 
-# 代码区
-------------------------------------------------------------------------------------------------
-### Esx1.9.0以上需要用到
+# 💻 代码区
+
+::: info 📚 关于本文档
+这里收录了 FiveM 开发中常用的代码片段和配置模板，方便快速查阅和复制使用。
+:::
+
+---
+
+## 🆕 ESX 框架基础
+
+### 🔹 Esx 1.9.0+ 新版本初始化
 ```lua
 ESX = exports["es_extended"]:getSharedObject()
 ```
-------------------------------------------------------------------------------------------------
-### fxmanifest.lua
+
+---
+
+### 📄 fxmanifest.lua 配置模板
 ```lua
 fx_version 'adamant' game 'gta5' lua54 'yes' 
 
@@ -43,8 +53,12 @@ files {
     'html/img/*.png'
 }
 ```
-------------------------------------------------------------------------------------------------
-### UI在线调试
+
+---
+
+## 🛠️ 开发工具
+
+### 🎯 UI 在线调试
 ```lua
 set sv_environment "development" 服务器
 
@@ -54,14 +68,20 @@ set sv_environment "development" 服务器
 
 F8打开 nui_devtools
 ```
-------------------------------------------------------------------------------------------------
-###  获取图片链接
+
+---
+
+### 🖼️ 获取图片资源链接
 ```lua
 local Tupian = "nui://ox_inventory/web/images/%s.png"
 (Tupian):format('billing')
 ```
-------------------------------------------------------------------------------------------------
-###  Fivem数据库连接
+
+---
+
+## 📦 ESX API 使用
+
+### 👤 玩家信息获取
 ```lua
 set mysql_connection_string "mysql://root@localhost/legacyshuguang?charset=utf8mb4_bin"
 set mysql_connection_string "mysql://账号:密码@localhost/luocheng
@@ -84,15 +104,18 @@ xPlayer.job.grade_name --英文
 xPlayer.job.grade_label --分昵称
 ```
 
-------------------------------------------------------------------------------------------------
-###  使用物品
+---
+
+### 🎁 注册可使用物品
 ```lua
 ESX.RegisterUsableItem('money', function(source)
     print('使用Money')
 end)
 ```
-------------------------------------------------------------------------------------------------
-###  Esx回调
+
+---
+
+### 🔄 ESX 服务器回调 (Callback)
 ```lua
 ESX.TriggerServerCallback('ls_phone检查手机物品', function(data)
     if data then
@@ -112,15 +135,21 @@ ESX.RegisterServerCallback('ls_phone检查手机物品',function(source, cb)
 	end
 end)
 ```
-------------------------------------------------------------------------------------------------
-###  Fivem Key按键
+
+---
+
+## ⌨️ 按键与命令
+
+### 🎮 按键监听
 ```lua
 if IsControlJustReleased(0, 212) then
     print('按下按键')
 end
 ```
----------------------------------------------------------------------------
-###  Fivem 按键绑定
+
+---
+
+### 🔘 按键绑定 (Key Mapping)
 ```lua
 RegisterKeyMapping('PoliceJob', '警察职业菜单', 'keyboard', 'F6')
 
@@ -128,8 +157,12 @@ RegisterCommand('PoliceJob', function()
     print('1')
 end)
 ```
----------------------
-###  Esx事件
+
+---
+
+## 📡 事件系统
+
+### 📤 事件触发与监听
 ```lua
 ExecuteCommand('1')
 
@@ -142,20 +175,30 @@ AddEventHandler('Qy_Core:Open', function()
     print('1')
 end)
 ```
-------------------------------------------------------------------------------------------------
-###  Esx 存入公款
+
+---
+
+## 💰 财务系统
+
+### 🏦 公司账户操作
 ```lua
 TriggerEvent('esx_addonaccount:getSharedAccount', 'society_mechanic', function(account)
     account.addMoney(amount)
 end)
 ```
-------------------------------------------------------------------------------------------------
-###  Esx Billing 发送账单
+
+---
+
+### 📝 发送账单 (Billing)
 ```lua
 TriggerServerEvent('esx_billing:sendBill', GetPlayerServerId(closestPlayer), 'society_ambulance', data, amount)
 ```
-------------------------------------------------------------------------------------------------
-###  Esx Inventory 库存
+
+---
+
+## 🎒 库存系统
+
+### 📦 ESX Inventory API
 ```lua
 
 local xPlayer = ESX.GetPlayerFromId(source)
@@ -188,8 +231,10 @@ end
 
 xPlayer.clearInventory()
 ```
-------------------------------------------------------------------------------------------------
-###  Ox_Inventory 代码
+
+---
+
+### 🔶 Ox_Inventory API
 ```lua
 
 /clearinv 清除背包

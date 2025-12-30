@@ -10,7 +10,7 @@ import 'virtual:group-icons.css' //代码组样式
 import './style/index.css' //自定义样式
 
 import { h } from 'vue' // h函数
-import { useData , useRoute } from 'vitepress'
+import { useData , useRoute, inBrowser } from 'vitepress'
 // mediumZoom
 import mediumZoom from 'medium-zoom';
 import { onMounted, watch, nextTick } from 'vue';
@@ -29,10 +29,6 @@ import backtotop from "./components/backtotop.vue" //返回顶部
 import notice from "./components/notice.vue" //公告
 import fluidborder from "./components/fluidborder.vue" //流体边框仅用于演示
 
-// 不蒜子
-import { inBrowser } from 'vitepress'
-import busuanzi from 'busuanzi.pure.js'
-import bsz from "./components/bsz.vue"
 
 
 export default {
@@ -49,14 +45,13 @@ export default {
     app.component('Linkcard' , Linkcard) //链接卡片
     app.component('fluidborder' , fluidborder) //流体边框仅用于演示
 
-    // 不蒜子
+    // 进度条
     if (inBrowser) {
       NProgress.configure({ showSpinner: false })
       router.onBeforeRouteChange = () => {
         NProgress.start() // 开始进度条
       }
       router.onAfterRouteChanged = () => {
-         busuanzi.fetch()
          NProgress.done() // 停止进度条
        }
     }
