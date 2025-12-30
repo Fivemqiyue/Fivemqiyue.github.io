@@ -63,6 +63,19 @@ outline: deep
   margin: 8px 0;
   line-height: 1.8;
 }
+
+/* 徽章样式 */
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.badges img {
+  height: 20px;
+  border-radius: 4px;
+}
 </style>
 
 # 💻 代码区
@@ -75,10 +88,22 @@ outline: deep
 
 ## 🆕 ESX 框架基础
 
-### 🔹 Esx 1.9.0+ 新版本初始化
-```lua
+### 🔹 ESX 初始化
+
+::: code-group
+```lua [ESX Legacy (旧版)]
+ESX = nil
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+```
+
+```lua [ESX 1.9.0+ (新版)]
 ESX = exports["es_extended"]:getSharedObject()
 ```
+:::
+
+::: tip 💡 提示
+ESX 1.9.0+ 版本推荐使用新的初始化方式，更简洁高效！
+:::
 
 ---
 
@@ -86,45 +111,76 @@ ESX = exports["es_extended"]:getSharedObject()
 
 <div class="template-download">
   <h4>📦 完整开发模板下载</h4>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/ESX-1.9.0+-blue" alt="ESX">
+    <img src="https://img.shields.io/badge/Lua-5.4-green" alt="Lua">
+    <img src="https://img.shields.io/badge/Ox__Lib-支持-orange" alt="Ox_Lib">
+  </div>
   <p>包含所有必需文件，开箱即用！</p>
   <a href="/downloads/Qy_Moban.zip" download class="download-btn-large">
     📥 下载七月开发模板 (Qy_Moban.zip)
   </a>
 </div>
 
+::: details 👁️ 点击查看完整配置
 ```lua
-fx_version 'adamant' game 'gta5' lua54 'yes' 
+fx_version 'adamant'
+game 'gta5'
+lua54 'yes'
 
-description '自定义内容'
+description '七月开发模板'
+author '七月 (Qiyue)'
+version '1.0.0'
 
-shared_script '@ox_lib/init.lua' 
+-- 依赖资源
+dependencies {
+    'es_extended',
+    'ox_lib',
+    'ox_inventory'
+}
 
+-- 服务端脚本
 server_scripts {
     '@oxmysql/lib/MySQL.lua',
-    'Server.lua'
-}
-client_scripts {
-    'Client.lua'
+    'server/main.lua'
 }
 
+-- 客户端脚本
+client_scripts {
+    'client/main.lua'
+}
+
+-- 共享脚本
 shared_scripts {
     '@es_extended/imports.lua',
-	'@es_extended/locale.lua',
-    'Config.lua'
+    '@es_extended/locale.lua',
+    '@ox_lib/init.lua',
+    'config.lua'
 }
 
-dependencies {
-	'ox_inventory'
-}
-
-escrow_ignore {
-    'Config.lua'
-}
+-- UI 文件
+ui_page 'html/index.html'
 
 files {
+    'html/index.html',
+    'html/style.css',
+    'html/script.js',
     'html/img/*.png'
 }
+
+-- 加密忽略
+escrow_ignore {
+    'config.lua',
+    'locales/*.lua'
+}
 ```
+:::
+
+::: warning ⚠️ 注意事项
+- 确保已安装 `es_extended`, `ox_lib`, `ox_inventory`
+- 修改 `description` 和 `author` 为你的信息
+- 根据实际项目调整脚本路径
+:::
 
 <style>
 .template-download {
@@ -218,104 +274,187 @@ files {
 ## 🛠️ 开发工具
 
 ### 🎯 UI 在线调试
-```lua
-set sv_environment "development" 服务器
 
-右键点击你的 FiveM 图标，选择“属性”。
-在“快捷方式”标签页中，找到“目标”字段，在其末尾添加 + set moo 31337。
-点击“应用”并确认。
+::: tip 📝 步骤
+1. **服务器端**：在 `server.cfg` 添加：
+   ```bash
+   set sv_environment "development"
+   ```
 
-F8打开 nui_devtools
-```
+2. **客户端**：
+   - 右键 FiveM 图标 → 属性
+   - 在“目标”末尾添加：`+ set moo 31337`
+   - 点击应用
+
+3. **使用**：
+   - 游戏中按 `F8`
+   - 输入 `nui_devtools`
+:::
 
 ---
 
 ### 🖼️ 获取图片资源链接
+
+::: details 👁️ 点击查看代码
 ```lua
-local Tupian = "nui://ox_inventory/web/images/%s.png"
-(Tupian):format('billing')
+local imageUrl = "nui://ox_inventory/web/images/%s.png"
+local formattedUrl = imageUrl:format('billing')
+print(formattedUrl) -- nui://ox_inventory/web/images/billing.png
 ```
+:::
 
 ---
 
 ## 📦 ESX API 使用
 
 ### 👤 玩家信息获取
-```lua
-set mysql_connection_string "mysql://root@localhost/legacyshuguang?charset=utf8mb4_bin"
-set mysql_connection_string "mysql://账号:密码@localhost/luocheng
-```
-------------------------------------------------------------------------------------------------
-###  Esx 原生代码 
-```lua
+
+::: code-group
+```lua [Server 端]
 local xPlayer = ESX.GetPlayerFromId(source)
-local time = '北京时间:'..os.date("%Y/%m/%d丨%X")
-xPlayer.getName()
-xPlayer.getGroup()
-xPlayer.getIdentifier()
 
-GetPlayerName(source) --Steam名
+-- 基础信息
+local playerName = xPlayer.getName()
+local playerGroup = xPlayer.getGroup()
+local identifier = xPlayer.getIdentifier()
 
-xPlayer.job.name  --主代码    
-xPlayer.job.label --主昵称
-xPlayer.job.grade --分数字
-xPlayer.job.grade_name --英文
-xPlayer.job.grade_label --分昵称
+-- 工作信息
+local jobName = xPlayer.job.name        -- 工作代码
+local jobLabel = xPlayer.job.label      -- 工作名称
+local grade = xPlayer.job.grade         -- 职位等级
+local gradeLabel = xPlayer.job.grade_label  -- 职位名称
 ```
+
+```lua [Client 端]
+local playerData = ESX.GetPlayerData()
+
+-- Steam 名字
+local steamName = GetPlayerName(PlayerId())
+
+-- 工作信息
+local job = playerData.job
+print(job.name, job.label, job.grade)
+```
+:::
+
+::: tip 💡 常用方法
+- `xPlayer.getMoney()` - 获取现金
+- `xPlayer.getAccount('bank').money` - 获取银行存款
+- `xPlayer.getInventoryItem('bread')` - 获取物品信息
+:::
 
 ---
 
 ### 🎁 注册可使用物品
+
+::: details 👁️ 点击查看示例
 ```lua
-ESX.RegisterUsableItem('money', function(source)
-    print('使用Money')
+-- Server 端注册
+ESX.RegisterUsableItem('phone', function(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    TriggerClientEvent('qy:openPhone', source)
 end)
+
+-- 多个物品
+local usableItems = {'phone', 'bread', 'water'}
+for _, item in pairs(usableItems) do
+    ESX.RegisterUsableItem(item, function(source)
+        print('玩家使用了: ' .. item)
+    end)
+end
 ```
+:::
 
 ---
 
 ### 🔄 ESX 服务器回调 (Callback)
-```lua
-ESX.TriggerServerCallback('ls_phone检查手机物品', function(data)
-    if data then
-        pirnt('有手机')
+
+::: code-group
+```lua [Client 端调用]
+ESX.TriggerServerCallback('qy:checkItem', function(hasItem)
+    if hasItem then
+        print('有该物品')
     else
-        pirnt('没有手机')
+        print('没有该物品')
+    end
+end, 'phone')
+```
+
+```lua [Server 端注册]
+ESX.RegisterServerCallback('qy:checkItem', function(source, cb, itemName)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    local item = xPlayer.getInventoryItem(itemName)
+    
+    if item and item.count >= 1 then
+        cb(true)
+    else
+        cb(false)
     end
 end)
-
-ESX.RegisterServerCallback('ls_phone检查手机物品',function(source, cb)
-	local xPlayer = ESX.GetPlayerFromId(source)
-	local item = xPlayer.getInventoryItem('phone')
-	if item.count >= 1 then
-		cb(true)
-	else
-		cb(false)
-	end
-end)
 ```
+:::
+
+::: tip 💡 使用说明
+1. Client 端调用 `TriggerServerCallback`
+2. Server 端注册 `RegisterServerCallback`
+3. 通过 `cb()` 返回结果
+:::
 
 ---
 
 ## ⌨️ 按键与命令
 
 ### 🎮 按键监听
-```lua
-if IsControlJustReleased(0, 212) then
-    print('按下按键')
+
+::: code-group
+```lua [简单监听]
+CreateThread(function()
+    while true do
+        Wait(0)
+        if IsControlJustReleased(0, 38) then -- E 键
+            print('按下了 E 键')
+        end
+    end
+end)
+```
+
+```lua [多按键组合]
+if IsControlPressed(0, 36) and IsControlJustReleased(0, 38) then -- Ctrl + E
+    print('按下了 Ctrl+E')
 end
 ```
+:::
+
+::: tip 💡 常用按键代码
+- `38` - E 键
+- `46` - E 键 (NUM)
+- `191` - Enter
+- `194` - 退格
+- `212` - HOME
+:::
 
 ---
 
 ### 🔘 按键绑定 (Key Mapping)
-```lua
-RegisterKeyMapping('PoliceJob', '警察职业菜单', 'keyboard', 'F6')
 
-RegisterCommand('PoliceJob', function()
-    print('1')
-end)
+::: details 👁️ 点击查看示例
+```lua
+-- 注册按键绑定
+RegisterKeyMapping('openPoliceMenu', '打开警察菜单', 'keyboard', 'F6')
+
+-- 注册命令
+RegisterCommand('openPoliceMenu', function()
+    -- 检查职业
+    if ESX.PlayerData.job.name == 'police' then
+        OpenPoliceMenu()
+    else
+        print('你不是警察')
+    end
+end, false)
+
+-- 禁用建议：false=允许建议, true=禁止建议
 ```
+:::
 
 ---
 
