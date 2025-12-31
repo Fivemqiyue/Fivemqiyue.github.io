@@ -4,11 +4,11 @@ layout: page
 
 <div class="scripts-hero">
   <div class="hero-content">
-    <h1 class="hero-title">付费脚本资源</h1>
-    <p class="hero-tagline">提供高质量的 FiveM 脚本开发和定制服务</p>
+    <h1 class="hero-title">福利脚本资源</h1>
+    <p class="hero-tagline">免费分享高质量 FiveM 脚本，助力服务器开发</p>
     <div class="hero-notice">
-      <span class="notice-icon">🌟</span>
-      <span class="notice-text">所有脚本均经过严格测试，保证质量 | 支持定制开发 | 专业售后服务</span>
+      <span class="notice-icon">🎁</span>
+      <span class="notice-text">完全免费 | 持续更新 | 禁止倒卖</span>
     </div>
   </div>
 </div>
@@ -16,54 +16,29 @@ layout: page
 <div class="scripts-container">
 
 <div class="section-header">
-  <h2>🎮 现有脚本</h2>
-  <p>精选的高质量 FiveM 脚本，每个都经过精心打磨</p>
+  <h2>🎁 免费脚本</h2>
+  <p>精选的免费 FiveM 脚本，无需付费即可使用</p>
 </div>
 
 <div class="script-grid">
 
-<a href="/ffcj/qy_admin" class="script-card-link">
-<div class="script-card admin-card">
+<div class="script-card free-card">
   <div class="script-overlay"></div>
   <div class="script-header">
-    <span class="script-icon">👮</span>
-    <h3>Qy_Admin</h3>
-    <span class="script-badge available">✅ 在售</span>
+    <span class="script-icon">📦</span>
+    <h3>示例脚本</h3>
+    <span class="script-badge free">🆓 免费</span>
   </div>
   <div class="script-content">
-    <p class="script-desc">综合服务器管理系统，提供玩家管理、车辆管理、资源管理等强大功能。</p>
+    <p class="script-desc">这是一个示例脚本的描述，您可以根据需要修改此内容。</p>
     <div class="script-features">
-      <span class="feature-tag">✅ 玩家管理</span>
-      <span class="feature-tag">✅ 车辆管理</span>
-      <span class="feature-tag">✅ 资源控制</span>
-      <span class="feature-tag">✅ 环境设置</span>
+      <span class="feature-tag">✅ 功能一</span>
+      <span class="feature-tag">✅ 功能二</span>
+      <span class="feature-tag">✅ 功能三</span>
     </div>
     <div class="script-meta">
-      <span>🔧 框架: ESX</span>
-      <span>💻 UI: 现代化</span>
-    </div>
-  </div>
-</div>
-</a>
-
-<div class="script-card mail-card disabled-card">
-  <div class="script-overlay"></div>
-  <div class="script-header">
-    <span class="script-icon">📧</span>
-    <h3>Qy_Mail</h3>
-    <span class="script-badge developing">🕒 开发中</span>
-  </div>
-  <div class="script-content">
-    <p class="script-desc">完整的邮件系统，支持玩家间发送消息、物品和资金，支持附件功能。</p>
-    <div class="script-features">
-      <span class="feature-tag">✅ 发送消息</span>
-      <span class="feature-tag">✅ 物品传送</span>
-      <span class="feature-tag">✅ 资金转账</span>
-      <span class="feature-tag">✅ 附件系统</span>
-    </div>
-    <div class="script-meta">
-      <span>🔧 框架: ESX</span>
-      <span>💻 UI: 精美</span>
+      <span>🔧 框架: ESX/QB</span>
+      <span>📅 持续更新</span>
     </div>
   </div>
 </div>
@@ -75,7 +50,7 @@ layout: page
 <style>
 /* Hero Section */
 .scripts-hero {
-  background: linear-gradient(135deg, #e0f2fe 0%, #dcfce7 100%);
+  background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
   padding: 80px 24px 100px;
   margin: 0 -24px 48px -24px;
   text-align: center;
@@ -94,7 +69,7 @@ layout: page
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2322c55e" fill-opacity="0.08"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  background: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f59e0b" fill-opacity="0.08"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
   opacity: 0.4;
 }
 
@@ -109,7 +84,7 @@ layout: page
 .hero-title {
   font-size: 52px;
   font-weight: 800;
-  background: linear-gradient(135deg, #0ea5e9, #10b981);
+  background: linear-gradient(135deg, #f59e0b, #ec4899);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -117,7 +92,7 @@ layout: page
   letter-spacing: 3px;
   line-height: 1.2;
   animation: fadeInUp 0.8s ease-out;
-  filter: drop-shadow(0 2px 4px rgba(14, 165, 233, 0.2));
+  filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.2));
 }
 
 @keyframes fadeInUp {
@@ -143,22 +118,22 @@ layout: page
 .hero-notice {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(15px);
-  border: 2px solid rgba(14, 165, 233, 0.2);
+  border: 2px solid rgba(245, 158, 11, 0.2);
   padding: 16px 28px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
   animation: fadeInUp 0.8s ease-out 0.4s both;
   transition: all 0.3s ease;
 }
 
 .hero-notice:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(14, 165, 233, 0.25);
+  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.25);
   background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(16, 185, 129, 0.3);
+  border-color: rgba(236, 72, 153, 0.3);
 }
 
 .notice-icon {
@@ -231,11 +206,6 @@ layout: page
   cursor: pointer;
 }
 
-.script-card.disabled-card {
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-
 .script-overlay {
   position: absolute;
   top: 0;
@@ -252,13 +222,9 @@ layout: page
   opacity: 0.95;
 }
 
-/* 自定义卡片背景 */
-.script-card.admin-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.script-card.mail-card {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+/* 福利脚本卡片背景 */
+.script-card.free-card {
+  background: linear-gradient(135deg, #f59e0b 0%, #ec4899 100%);
 }
 
 .script-card:hover {
@@ -300,12 +266,8 @@ layout: page
   font-weight: 600;
 }
 
-.script-badge.available {
-  background: linear-gradient(135deg, #10b981, #059669);
-}
-
-.script-badge.developing {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+.script-badge.free {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
 }
 
 .script-content {
@@ -346,11 +308,4 @@ layout: page
   border-top: 1px solid var(--vp-c-divider);
 }
 
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  margin: 24px 0;
-}
 </style>

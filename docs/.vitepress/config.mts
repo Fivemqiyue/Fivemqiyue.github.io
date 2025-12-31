@@ -103,6 +103,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '私人笔记', link: '/qiyue/index' },
       { text: '付费脚本', link: '/ffcj/index' },
+      { text: '福利脚本', link: '/fuli/index' },
       { text: '资源整合', link: '/resources/index' },
     ],
 
